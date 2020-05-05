@@ -1,18 +1,34 @@
-function Player(i,j,size,color){
+module.exports=function(i,j,size,color,offset){
     this.i=i;this.j=j;
     this.size=size;
     this.color=color;
-    this.x=this.i*this.size;
-    this.y=this.j*this.size;
+    this.offset=offset;
+    document.addEventListener('keyup',(e)=>{
+        e.preventDefault();
+        console.log(e);
+    });
+    document.addEventListener('keydown',(e)=>{
+        e.preventDefault();
+        console.log(e);
+        if(e.key==='ArrowUp'){
+            console.log("sfbi");
+            this.j-=1;
+        }
+    });
 
     this.update=function(){
-
+        
     }
 
     this.draw=function(ctx){
+        console.log(this.j);
+        
+        x=this.i*this.offset;
+        y=this.j*this.offset;
         ctx.fillStyle=this.color;
-        ctx.fillRect(this.x,this.y,this.size-1,this.size-1);               
+        ctx.fillRect(x,y,this.size,this.size);               
     }
 
 }
-module.exports={Player}
+
+

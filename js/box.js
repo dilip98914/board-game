@@ -5,14 +5,18 @@ module.exports=function(i,j,size,color){
     this.color=color;
     this.x=this.i*this.size;
     this.y=this.j*this.size;
-    console.log(this.color);
+    this.active=false;
 
     this.update=function(){
 
     }
 
-    this.draw=function(ctx){
-        ctx.fillStyle=this.color;
+    this.draw=function(ctx,color){
+        if(color){
+            ctx.fillStyle=color;
+        }else{
+            ctx.fillStyle=this.color;
+        }
         ctx.fillRect(this.x,this.y,this.size-1,this.size-1);               
     }
 }

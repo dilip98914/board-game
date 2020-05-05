@@ -1,4 +1,4 @@
 module.exports={
-    screeWidth:500,
-    screenHeight:500,
+    width:500,
+    height:500,
 }
