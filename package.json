@@ -1,0 +1,14 @@
+{
+  "name": "ludoclone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "browserify js/index.js -o js/bundle.js && http-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {}
+}
